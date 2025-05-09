@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #FFE7C1, #FFD1DC);
+    padding: 2rem;
+  }
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 20px rgba(255, 193, 7, 0.2);
+    transform: translateY(-5px);
+    /* border: 1px solid #FFC107; */
+  }
+
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .profile img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #f8c8dc;
+  }
+
+  .profile-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #aa4a44;
+  }
+
+  .description {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.5;
+  }
+
+  .msg-header {
+  background-color: #700004 ;
+  color: #ffe4c4;
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+}
+
+button {
+    background: #700004;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: solid 2px #700004;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  button:hover {
+    background: white;
+    color: #700004;
+    border: solid 2px #700004;
+    transition: all 0.5s ease;
+  }
+
+.messages-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 2em;
+  }
+
+  .container {
+    background: white;
+    padding: 40px 60px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    max-width: 1000px;
+    width: 100%;
+  }
+
+  .headline {
+    font-size: 2.5rem;
+    color: #700004;
+    margin-bottom: 10px;
+  }
