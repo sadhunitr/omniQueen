@@ -32,6 +32,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-bottom: 4.5rem;
   }
   
   .container {
@@ -134,6 +135,31 @@
   }
   
   .container {
+    background: white;
+    padding: 40px 60px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    max-width: 1000px;
+    width: 100%;
+  }
+
+  .track-label p {
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: normal;
+  }
+
+
+  .cards-content {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 4.5rem;
+  }
+  
+  .content {
     background: white;
     padding: 40px 60px;
     border-radius: 20px;
