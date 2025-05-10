@@ -4,31 +4,155 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Happy Birthday Bhoomi</title>
+  <link rel = "icon" href = "./omniQueen/pfp.png" type = "image/x-icon">
   <link rel="stylesheet" href="hidden.css" />
+  <link rel="stylesheet" href="audio.css" />
 </head>
 <body>
-    <section class="cards-container">
-        <div class="container">
+    <section class="cards-content">
+        <div class="content">
             <h1 class="pretext">Some people just light up the world around them—you’re definitely one of them.</h1> 
             <h1 class="headline"> Happy Birthday, Vanshika! </h1>
             <!-- <p class="subtext">Something truly special has been prepared for your big day. Click below and unwrap the joy, memories, and heartfelt wishes waiting just for you!</p> -->
         </div>
-    </section>
-    <section class="cards-container">
-        <div class="container">
-            <h1 class="headline">Our Shared Memories</h1>
-            <p class="text">May 25th, 2024</p>
-            <p class="subtext">Did you know? Isi din humne pehli baar baat ki thi...</p>
-            <p class="text">Aug 27th, 2024</p>
-            <p class="subtext">Did you know? Isi din tumne pehli baar apni voice note bheji thi...</p>
-            <p class="text">Oct 24th, 2024</p>
-            <p class="subtext">Did you know? Isi din hum snapchat pe connect hue the...</p>
-            <p class="text">Apr 18th, 2025</p>
-            <p class="subtext">Did you know? Isi din tumne pehli baar clearly apna face reveal kiya tha...</p>
-            <p class="subtext"></p>
-            <p class="lasttext">Mujhe ye sari baatein, dates ke sath yaad hai... Par ek baat aaj tak mere liye bhi rahasya bani huyi hai ki GC walo ne hume eksath ship kyu kiya tha 🙂 Shayad ye raaz ab humesha raaz hi bankar reh jayega...</p>
-        </div>
-    </section>
+    </section>    
 
+<!-- Audio Files -->
+<section class="audio-container">
+    <div class="bg">
+        <h1>Our Shared Memories</h1>
+        <div class="audio-grid">
+
+            <div class="melody-box">
+              <div class="track-row">
+                <div class="track-label">
+                    <h3>May 25th, 2024</h1>
+                    <p>Wo din jab humne pehli</p>
+                    <p>baar baat ki thi</p>
+                </div>
+              </div>
+            </div>
+        
+            <div class="melody-box">
+                <div class="track-row">
+                  <div class="track-label">
+                      <h3>Aug 27th, 2024</h1>
+                      <p>Wo din jab tumne pehli</p>
+                      <p>baar voice note bheji thi</p>
+                  </div>
+                </div>
+            </div>
+        
+            <div class="melody-box">
+                <div class="track-row">
+                  <div class="track-label">
+                      <h3>Oct 29th, 2024</h1>
+                      <p>Wo din jab hum snapchat</p>
+                      <p>pe connect hue the</p>
+                  </div>
+                </div>
+            </div>
+        
+            <div class="melody-box">
+                <div class="track-row">
+                  <div class="track-label">
+                      <h3>Apr 18th, 2025</h1>
+                      <p>Is din tumne pehli baar</p>
+                      <p>clearly apna face reveal kiya tha</p>
+                  </div>
+                </div>
+            </div>
+
+            <p>(Note: The audio in the following voice notes arn’t audible enough. Kindly set the volume to maximum for better experience.)</p>
+
+                <div class="melody-box">
+                  <div class="track-row">
+                    <div class="track-label">
+                        <h3>Jhooth</h3>
+                    </div>
+                    <button class="tune-trigger" onclick="togglePlay(this)">▶️ Play</button>
+                  </div>
+                  <audio src="/jhooth.mp3"></audio>
+                </div>
+            
+                <div class="melody-box">
+                  <div class="track-row">
+                    <div class="track-label">
+                        <h3>Goongi</h3>
+                    </div>
+                    <button class="tune-trigger" onclick="togglePlay(this)">▶️ Play</button>
+                  </div>
+                  <audio src="/goongi.mp3"></audio>
+                </div>
+            
+                <div class="melody-box">
+                  <div class="track-row">
+                    <div class="track-label">
+                        <h3>Padhai Karo</h3>
+                    </div>
+                    <button class="tune-trigger" onclick="togglePlay(this)">▶️ Play</button>
+                  </div>
+                  <audio src="/padhai.mp3"></audio>
+                </div>
+            
+                <div class="melody-box">
+                  <div class="track-row">
+                    <div class="track-label">
+                        <h3>So Jaao</h3>
+                    </div>
+                    <button class="tune-trigger" onclick="togglePlay(this)">▶️ Play</button>
+                  </div>
+                  <audio src="/sojao.mp3"></audio>
+                </div>
+            
+        
+        
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <script>
+        function togglePlay(button) {
+            const box = button.closest('.melody-box');
+            const audio = box.querySelector('audio');
+
+            // Pause all other audios
+            document.querySelectorAll('audio').forEach(a => {
+                if (a !== audio) {
+                a.pause();
+                a.parentElement.querySelector('.tune-trigger').textContent = '▶️ Play';
+                }
+            });
+
+            // Toggle current audio
+            if (audio.paused) {
+                audio.play();
+                button.textContent = '⏸ Pause';
+            } else {
+                audio.pause();
+                button.textContent = '▶️ Play';
+            }
+
+            audio.onended = () => {
+                button.textContent = '▶️ Play';
+            };
+        }
+      </script>
 </body>
 </html>
